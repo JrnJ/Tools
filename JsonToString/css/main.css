@@ -1,0 +1,53 @@
+* {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+body {
+    background-color: #202020;
+    margin: 0px;
+}
+
+/* <Button> */
+button {
+    background-color: #252525;
+    border: none;
+    height: 28px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 2px;
+}
+
+button:hover {
+    background-color: #272727;
+}
+
+button:active {
+    background-color: #292929;
+}
+/* </Button> */
+
+/* <Input> */
+input {
+    background-color: #252525;
+    border: 1px solid #191919;
+    color: white;
+
+    height: 26px;
+    border-radius: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+input:focus {
+    outline: none;
+}
+/* </Input> */
+
+/* <TextArea> */
+textarea {
+    background-color: #252525;
+    border: 1px solid #191919;
+    color: white;
+}
+/* </TextArea> */

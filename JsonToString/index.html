@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="JSON Converter Tool" />
+    <meta property="og:description" content="JSON to String converter" />
+    <meta property="og:url" content="https://tools.jeroenj.com/JsonToString" />
+    <!-- <meta property="og:image" content="https://embed.com/embedimage.png" /> -->
+    <meta data-react-helmet="true" name="theme-color" content="#FF6600" />
+
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+</head>
+
+<body>
+
+    <!-- Im quite sad to see that the top results on google dont even work-->
+    <center>
+        <span style="font-size: 24px;">Input</span><br>
+        <textarea id="jsonText" style="width: 500px; height: 300px;"></textarea><br>
+        <button onclick="ConvertJSON()">Convert</button><br><br>
+        <span style="font-size: 24px;">Output</span><br>
+        <textarea id="jsonStringText" style="width: 500px; height: 300px;"></textarea><br>
+    </center>
+
+    <script src="./js/converter.js"></script>
+
+</body>
+
+</html>
