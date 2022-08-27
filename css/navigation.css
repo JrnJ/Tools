@@ -1,0 +1,106 @@
+/*
+    #version: 1.1
+*/
+
+#navigation {
+    top: 0;
+    height: 120px;
+    position: sticky;
+}
+
+#navigation * {
+    color: white;
+    font-family: 'Consolas';
+}
+
+#navBackground {
+    background-color: #292929;
+    height: 120px;
+    opacity: 0.99;
+
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#navContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.navImageBorder {
+    padding-top: 20px;
+    padding-left: 20px;
+    overflow: hidden;
+}
+
+/* <Navigation Image> */
+.navImage {
+    background-color: transparent;
+    background-image: url('./../3dSphere.png');
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+    float: left;
+    border: 0px solid black;
+}
+
+.navImage:hover {
+    opacity: 0.825;
+    cursor: pointer;
+}
+/* </Navigation Image> */
+
+.navTitle {
+    font-size: 22px;
+}
+
+.navInfo {
+    float: left;
+    padding-left: 20px;
+}
+
+.navWikiInfo {
+    float: left;
+    padding-left: 20px;
+}
+
+#navTabs {
+    overflow-y: hidden;
+    padding-left: 100px;
+}
+
+.navTab {
+    background-color: #282828;
+    border: 0px;
+    border-radius: 10px;
+
+    height: 100px;
+    float: left;
+
+    margin-right: 28px;
+
+    font-size: 20px;
+}
+
+.navTab:hover {
+    color: red;
+}
+
+.hoverr:hover {
+    color: red;
+}
+
+.navTab:active {
+    
+}
+
+.navTabImage {
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    margin-top: 8px; /* Some sort of bottom alignment please */
+}

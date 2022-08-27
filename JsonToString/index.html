@@ -2,7 +2,7 @@
 <html lang="nl">
 
 <head>
-    <title>Home</title>
+    <title>JsonToString</title>
     <meta charset="UTF-8">
 
     <meta property="og:type" content="website" />
@@ -12,19 +12,41 @@
     <!-- <meta property="og:image" content="https://embed.com/embedimage.png" /> -->
     <meta data-react-helmet="true" name="theme-color" content="#FF6600" />
 
-    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./../css/navigation.css" />
 </head>
 
 <body>
 
-    <!-- Im quite sad to see that the top results on google dont even work-->
-    <center>
-        <span style="font-size: 24px;">Input</span><br>
-        <textarea id="jsonText" style="width: 500px; height: 300px;"></textarea><br>
-        <button onclick="ConvertJSON()">Convert</button><br><br>
-        <span style="font-size: 24px;">Output</span><br>
-        <textarea id="jsonStringText" style="width: 500px; height: 300px;"></textarea><br>
-    </center>
+    <!-- Navigation | v1.1 -->
+    <div id="navigation">
+        <div id="navBackground"></div>
+
+        <div id="navContent">
+            <div class="navImageBorder">
+                <a href="./../index.html"><button class="navImage"></button></a>
+                <div class="navWikiInfo">
+                    <span class="navTitle">JsonToString</span>
+                    <br><span class="navTitle">Converts JSON to a String</span>
+                    <br><a href="https://github.com/JrnJ"
+                        style="color: #FF6600; text-decoration: none; font-weight: bold;">By JeroenJ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Navigation | v1.1  -->
+
+    <!-- Body -->
+    <div id="body">
+        <center>
+            <span style="font-size: 24px;">Input</span><br>
+            <textarea id="jsonText" style="width: 500px; height: 300px;"></textarea><br>
+            <button onclick="ConvertJSON()">Convert</button><br><br>
+            <span style="font-size: 24px;">Output</span><br>
+            <textarea id="jsonStringText" style="width: 500px; height: 300px;"></textarea><br>
+        </center>
+    </div>
+    <!-- /Body -->
 
     <script src="./js/converter.js"></script>
 

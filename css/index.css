@@ -1,0 +1,34 @@
+.test {
+    width: 140px;
+}
+
+.test a {
+    text-decoration: none;
+}
+
+.cardContent {
+    background-color: #252525;
+    height: 100px;
+    width: 200px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    border: none;
+    font-size: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardContent:hover {
+    background-color: #272727;
+}
+
+.cardContent:active {
+    background-color: #292929;
+}
+
+.cardContent span {
+    color: white;
+}
