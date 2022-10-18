@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>CuboidToUV</title>
+    <meta charset="UTF-8">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CuboidToUV" />
+    <meta property="og:description" content="Cuboid to UV map generator for Minecraft" />
+    <meta property="og:url" content="https://tools.jeroenj.com/CuboidToUV" />
+    <!-- <meta property="og:image" content="https://embed.com/embedimage.png" /> -->
+    <meta data-react-helmet="true" name="theme-color" content="#FF6600" />
+
+    <link rel="stylesheet" type="text/css" href="./../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./../css/navigation.css" />
+</head>
+
+<body>
+
+    <!-- Navigation | v1.1 -->
+    <div id="navigation">
+        <div id="navBackground"></div>
+
+        <div id="navContent">
+            <div class="navImageBorder">
+                <a href="./../index.html"><button class="navImage"></button></a>
+                <div class="navWikiInfo">
+                    <span class="navTitle">CuboidToUV</span>
+                    <br><span class="navTitle">Creates a Cuboid UV Map for Minecraft</span>
+                    <br><a href="https://github.com/JrnJ"
+                        style="color: #FF6600; text-decoration: none; font-weight: bold;">By JeroenJ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Navigation | v1.1  -->
+
+    <!-- Body -->
+    <div id="body">
+        <input type="number" placeholder="x" id="xInput">
+        <input type="number" placeholder="y" id="yInput">
+        <input type="number" placeholder="z" id="zInput">
+
+        <button onclick="CreatePNGClick()">Create</button><br><br>
+
+        <div id="imageContainer">
+
+        </div>
+    </div>
+    <!-- /Body -->
+
+    <script src="./js/converter.js"></script>
+
+</body>
+
+</html>
