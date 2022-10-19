@@ -173,7 +173,7 @@ function FillUV(sizeX, sizeY, sizeZ) {
         blockSide6.push([]);
         uhm++;
 
-        for (let x = 0; x < sizeZ; x++) {
+        for (let x = 0; x < sizeY; x++) {
             uhm++;
             blockSide6[y].push([255 - (uhm % 2 * 50), 0, 255 - (uhm % 2 * 50), 1 / 255 * 255]);
         }
