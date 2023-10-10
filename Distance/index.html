@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <title>Distance</title>
+    <meta charset="UTF-8">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Distance" />
+    <meta property="og:description" content="Distance" />
+    <meta property="og:url" content="https://tools.jeroenj.com/Distance" />
+    <!-- <meta property="og:image" content="https://embed.com/embedimage.png" /> -->
+    <meta data-react-helmet="true" name="theme-color" content="#FF6600" />
+
+    <link rel="stylesheet" type="text/css" href="./../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./../css/navigation.css" />
+</head>
+
+<body>
+
+    <!-- Navigation | v1.1 -->
+    <div id="navigation">
+        <div id="navBackground"></div>
+
+        <div id="navContent">
+            <div class="navImageBorder">
+                <a href="./../index.html"><button class="navImage"></button></a>
+                <div class="navWikiInfo">
+                    <span class="navTitle">Distance</span>
+                    <br><span class="navTitle">Distance</span>
+                    <br><a href="https://github.com/JrnJ"
+                        style="color: #FF6600; text-decoration: none; font-weight: bold;">By JeroenJ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Navigation | v1.1  -->
+
+    <!-- Body -->
+    <div id="body">
+        <center>
+            <div>
+                Walking: 5 km/h<br>
+                Jogging: 8 km/h<br>
+                Running: 10 km/h<br>
+            </div><br>
+
+            <input id="inputMinutes"    placeholder="minutes"       type="number"   oninput="InputMinutesOnInput()">
+            <input id="inputSeconds"    placeholder="seconds"       type="number"   oninput="InputSecondsOnInput()">
+
+            <br>
+            <input id="inputKmh"        placeholder="km/h"          type="number"   oninput="InputKmhOnInput()">
+            <input id="inputMs"         placeholder="m/s"           type="number"   oninput="InputMsOnInput()">
+
+            <br>
+            <input id="inputKilometers" placeholder="kilometers"    type="number"   oninput="" disabled>
+            <input id="inputMeters"     placeholder="meters"        type="number"   oninput="" disabled>
+
+            <br><br>
+            <!-- <button>Add Entry</button> -->
+        </center>
+    </div>
+    <!-- /Body -->
+
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>

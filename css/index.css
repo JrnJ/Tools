@@ -1,34 +1,26 @@
-.test {
-    width: 140px;
-}
-
-.test a {
-    text-decoration: none;
+/* <Cards> */
+#cardContainer {
+    display: flex;
+    flex-wrap: wrap; /* This allows items to wrap to the next line */
+    justify-content: flex-start; /* Align items to the left */
 }
 
 .cardContent {
-    background-color: #252525;
-    height: 100px;
     width: 200px;
-    border-radius: 6px;
-    margin-bottom: 6px;
-    border: none;
-    font-size: 16px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.cardContent:hover {
-    background-color: #272727;
-}
-
-.cardContent:active {
-    background-color: #292929;
+    height: 100px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 0.25rem;
 }
 
 .cardContent span {
-    color: white;
+    display: block;
+    font-size: 1rem;
 }
+
+.cardContent .grey {
+    font-size: 0.85rem;
+    color: #999999;
+    margin-top: -0.1rem;
+}
+/* </Cards> */

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <title>JsonToObject</title>
+    <meta charset="UTF-8">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="JSON Converter Tool" />
+    <meta property="og:description" content="JSON to Object converter" />
+    <meta property="og:url" content="https://tools.jeroenj.com/JsonToString" />
+    <!-- <meta property="og:image" content="https://embed.com/embedimage.png" /> -->
+    <meta data-react-helmet="true" name="theme-color" content="#FF6600" />
+
+    <link rel="stylesheet" type="text/css" href="./css/test.css" />
+    <link rel="stylesheet" type="text/css" href="./../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./../css/navigation.css" />
+</head>
+
+<body>
+
+    <!-- Navigation | v1.1 -->
+    <div id="navigation">
+        <div id="navBackground"></div>
+
+        <div id="navContent">
+            <div class="navImageBorder">
+                <a href="./../index.html"><button class="navImage"></button></a>
+                <div class="navWikiInfo">
+                    <span class="navTitle">JsonToObject</span>
+                    <br><span class="navTitle">Converts JSON to an Object</span>
+                    <br><a href="https://github.com/JrnJ"
+                        style="color: #FF6600; text-decoration: none; font-weight: bold;">By JeroenJ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Navigation | v1.1  -->
+
+    <!-- Body -->
+    <div id="body">
+        <div class="dockpanel">
+            <div class="stackpanel" style="margin-right: 1rem">
+                <h1>Variable Name Regex</h1>
+                <input type="text" id="variableNameRegex" placeholder="_-">
+            </div>
+            <div class="stackpanel" style="margin-left: 1rem">
+                <h1>JSON Input</h1>
+                <textarea id="jsonText" style="width: 500px; height: 300px;"></textarea><br>
+
+                <button onclick="ConvertJSON()">Convert</button><br><br>
+
+                <h1>Object Output</h1>
+                <textarea id="jsonObjectText" style="width: 500px; height: 300px;"></textarea><br>
+            </div>
+        </div>
+    </div>
+    <!-- /Body -->
+
+    <script src="./js/newer.js"></script>
+
+</body>
+
+</html>

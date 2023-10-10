@@ -1,0 +1,41 @@
+{
+    "Int": 0,
+    "String": "Text: \"Yes!\"",
+    "Double": 0.01,
+    "Context": {
+      "Id": 0,
+      "Name": "ContextName"
+    },
+    "Items": [
+      {
+        "Id": 0,
+        "Name": "Test0"
+      },
+      {
+        "Id": 1,
+        "Name": "Test1"
+      }
+    ]
+}
+
+.
+
+public class Example
+{
+  public int Int { get; }
+  public string String { get; }
+  public double Double {get; }
+  public List<Item> Items { get; }
+}
+
+public class Context
+{
+  public int Id { get; }
+  public String Name { get; }
+}
+
+public class Item
+{
+  public int Id { get; }
+  public string Name { get; }
+}
