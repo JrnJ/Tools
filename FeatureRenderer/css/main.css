@@ -1,0 +1,51 @@
+.input-output {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#outputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 500px;
+}
+
+.output {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 500px;
+}
+
+.fileOutput {
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid black;
+    border-radius: 0.25rem;
+}
+
+.fileOutput p {
+    border-bottom: 1px solid black;
+    font-size: 1.5rem;
+}
+
+.fileOutput textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    resize: none;
+    background-color: transparent;
+}

@@ -1,0 +1,33 @@
+body {
+    background-color: #121212;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.container > .input {
+    min-width: 300px;
+    height: 100%;
+}
+
+.container > .output {
+    min-width: 300px;
+    height: auto;
+
+    background-color: #141414;
+}
+
+textarea {
+    background-color: #121212;
+    border: 1px solid #787878;
+    color: white;
+
+    width: 100%;
+    min-height: 400px;
+}

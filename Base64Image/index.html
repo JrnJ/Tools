@@ -14,81 +14,39 @@
 
     <link rel="stylesheet" type="text/css" href="./../css/main.css" />
     <link rel="stylesheet" type="text/css" href="./../css/navigation.css" />
+
+    <script src="./js/converter.js" defer></script>
+
+    <style>
+        .element-file-dropzone {
+            border: 1px dashed red;
+            padding: 0.5rem;
+        }
+    </style>
 </head>
 
 <body>
 
-    <label for="fileInput">Upload Image or Base64 Text File:</label>
-    <input type="file" id="fileInput" accept=".txt, .png, .jpg, .jpeg, .gif, .bmp">
+    <div>
+        <label for="fileInput">Upload Image or Base64 Text File:</label>
+        <input type="file" id="fileInput" accept=".txt, .png, .jpg, .jpeg, .gif, .bmp"><br>
+
+        <!-- <div id="dropInput" class="element-file-dropzone">
+            <p>Or drop an image or URL to an image here</p>
+        </div> -->
+    </div>
+
+
+    <button id="encrypt">Encrypt</button>
+    <button id="decrypt">Decrypt</button>
+    <button id="viewImage">View Image</button>
     <br>
     <br>
-    <button onclick="convertToBase64()">Convert to Base64</button>
-    <button onclick="downloadBase64()">Download Base64 as Text File</button>
-    <button onclick="convertToImage()">Convert to Image</button>
-  
-    <script>
-      let base64String = '';
-  
-      function convertToBase64() {
-        const fileInput = document.getElementById('fileInput');
-  
-        if (fileInput.files.length > 0) {
-          const file = fileInput.files[0];
-  
-          if (file.type.includes('image')) {
-            // If it's an image file, convert it to base64 directly
-            const reader = new FileReader();
-  
-            reader.onloadend = () => {
-              base64String = reader.result.split(',')[1]; // Remove the data URI prefix
-            };
-  
-            reader.readAsDataURL(file);
-          } else if (file.type.includes('text')) {
-            // If it's a text file, read the base64 string from the file
-            const reader = new FileReader();
-  
-            reader.onloadend = () => {
-              base64String = reader.result.trim();
-            };
-  
-            reader.readAsText(file);
-          }
-        }
-      }
-  
-      function downloadBase64() {
-        if (base64String) {
-          const blob = new Blob([base64String], { type: 'text/plain' });
-  
-          const downloadLink = document.createElement('a');
-          downloadLink.href = URL.createObjectURL(blob);
-          downloadLink.download = 'base64_string.txt';
-  
-          document.body.appendChild(downloadLink);
-          downloadLink.click();
-  
-          document.body.removeChild(downloadLink);
-        } else {
-          alert('No base64 string found. Please select a valid file and convert to base64 first.');
-        }
-      }
-  
-      function convertToImage() {
-        if (base64String) {
-          const imgElement = document.createElement('img');
-          imgElement.setAttribute('src', 'data:image/jpeg;base64,' + base64String);
-  
-          // Append the image to the body or any other desired location
-          document.body.appendChild(imgElement);
-        } else {
-          alert('No base64 string found. Please select a valid file and convert to base64 first.');
-        }
-      }
-    </script>
-
-    <script src="./js/converter.js"></script>
-
+    <input type="text" id="nameInput" placeholder="File name on download">
+    <button id="downloadAsBase64">Download as Base64</button>
+    <button id="downloadAsImage">Download as Image</button>
+    <br>
+    <br>
 </body>
 
 </html>
