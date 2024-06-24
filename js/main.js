@@ -1,5 +1,5 @@
 /*
-    #version: 1.0
+    #version: 1.1
     #2024 June 24
 */
 
@@ -14,34 +14,67 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 /* </Events> */
 
-/* <Style Swapper> */
-const styles = {
-    'dark': './css/themes/theme-dark.css',
-    'light': './css/themes/theme-light.css',
-    'amoled': './css/themes/theme-amoled.css',
-    'pink': './css/themes/theme-pink.css',
+/* <Theme Swapper> */
+const themeCookieName = 'theme';
+const themes = {
+    'Dark': {
+        path: './css/themes/theme-dark.css',
+        name: 'Dark',
+    },
+    'Light': {
+        path: './css/themes/theme-light.css',
+        name: 'Light',
+    },
+    'Amoled': {
+        path: './css/themes/theme-amoled.css',
+        name: 'Amoled',
+    },
+    'Pink': {
+        path: './css/themes/theme-pink.css',
+        name: 'Pink',
+    },
 };
-const styleCookieName = 'theme';
+let currentTheme;
 
 document.addEventListener('DOMContentLoaded', function() {
-    setStyle(getCookie(styleCookieName, cookieDomain));
+    setTheme(getCookie(themeCookieName, cookieDomain));
+
+    Object.keys(themes).forEach(key => {
+        addThemeOption(themes[key], (currentTheme.name === themes[key].name));
+    });
+
+    document.querySelector('#theme-selector').addEventListener('change', (e) => {
+        setTheme(e.target.value, false);
+    });
 });
 
-function setStyle(style) {
-    if (!style) {
+function addThemeOption(theme, selected) {
+    const option = document.createElement('option');
+    option.value = theme.name;
+    option.textContent = theme.name;
+    if (selected) {
+        option.selected = true;
+    }
+
+    document.querySelector('#theme-selector').appendChild(option);
+}
+
+function setTheme(theme) {
+    if (!theme) {
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-            style = 'light';
+            theme = 'Light';
         } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: amoled)').matches) {
-            style = 'amoled';
+            theme = 'Amoled';
         } else {
-            style = 'dark';
+            theme = 'Dark';
         } 
     }
     
-    document.querySelector('#theme-current').href = styles[style];
-    setCookie(styleCookieName, style, cookieDomain);
+    document.querySelector('#theme-current').href = themes[theme].path;
+    currentTheme = themes[theme];
+    setCookie(themeCookieName, themes[theme].name, cookieDomain);
 }
-/* </Style Swapper> */
+/* </Theme Swapper> */
 
 /* <Storage> */
 function setStorageItem(key, value) {
