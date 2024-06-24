@@ -1,19 +1,19 @@
 /*
-    #version: 1.6
-    #2024 June 19
+    #version: 1.7
+    #2024 June 24
 */
 
-:root {
+/* :root {
     --text-white: white;
 
-    --background-primary: #121212;
+    --background-primary: #ffffff;
 
     --background-content-primary: #161616;
     --background-content-secondary: #181818;
     --background-content-active: #202020;
 
     --border-color: #787878;
-}
+} */
 
 * {
     font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
@@ -133,14 +133,6 @@ input:focus {
 }
 /* </RadioInput> */
 
-/* <FileInput> */
-input[type="file"] {
-    background-color: var(--background-primary);
-    border: 1px solid var(--border-color);
-    color: var(--text-white);
-}
-/* </FileInput> */
-
 /* <Checkbox Button> */
 .checkbox-toolbar input[type="checkbox"] {
     width: 0px;
@@ -164,6 +156,19 @@ input[type="file"] {
 }
 
 /* <Checkbox Button> */
+
+/* <Select> */
+select {
+    background-color: var(--background-content-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+}
+
+select:focus {
+    outline-color: none;
+}
+/* </Select> */
 
 /* <TextArea> */
 textarea {
