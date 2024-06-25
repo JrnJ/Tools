@@ -1,6 +1,6 @@
 /*
-    #version: 1.1
-    #2024 June 24
+    #version: 1.2
+    #2024 June 25
 */
 
 /* <Config> */

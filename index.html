@@ -16,37 +16,131 @@
     <link rel="stylesheet" type="text/css" href="./css/navigation.css" />
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
 
-    <link rel="stylesheet" type="text/css" href="./../css/main.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="./../css/main.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="./../css/navigation.css" /> -->
 
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="" id="theme-current" />
 
-    <!-- <script src="./js/main.js" defer></script> -->
-    <script src="./../js/main.js" defer></script>
+    <script src="./js/main.js" defer></script>
+    <!-- <script src="./../js/main.js" defer></script> -->
 </head>
 
 <body>
 
-    <!-- Navigation | v1.1 -->
-    <div id="navigation">
-        <div id="navBackground"></div>
-
-        <div id="navContent">
-            <div class="navImageBorder">
-                <a href="https://jeroenj.com/Home/"><button class="navImage"></button></a>
-                <div class="navWikiInfo">
-                    <span class="navTitle">Useful Random Tools</span>
-                    <!-- <br><span class="navTitle">Second Line</span> -->
-                    <br><a href="https://github.com/JrnJ"
-                        style="color: #FF6600; text-decoration: none; font-weight: bold;">By JeroenJ</a>
+    <!-- <Navigation v2.0> -->
+    <nav>
+        <div class="nav-content">
+            <div class="nav-left">
+                <div class="nav-img">
+                    <img src="./3dSphere.png">
+                </div>
+                <div class="nav-titles">
+                    <p class="nav-title-primary">Tools</p>
+                    <p class="nav-title-secondary">Random useful tools</p>
+                    <p class="nav-author gradient-text">JeroenJ</p>
                 </div>
             </div>
+            <div>
+                <label for="theme-selector">Theme</label>
+                <select id="theme-selector" name="theme-selector"></select>
+            </div>
         </div>
-    </div>
-    <!-- /Navigation | v1.1  -->
+    </nav>
+    <!-- </Navigation> -->
+
+    <main>
+        <h1>Tools</h1>
+        <ul id="cardContainer">
+            <li>
+                <a href="https://learn.jeroenj.com/index.html">
+                    <button class="cardContent">
+                        <span>Learn</span>
+                        <span class="grey">Learn Any Language</span>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="./CuboidToUV/index.html">
+                    <button class="cardContent">
+                        <span>CuboidToUV</span>
+                        <span class="grey">Cuboid To UV Map</span>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="./Distance/index.html">
+                    <button class="cardContent">
+                        <span>Distance</span>
+                        <span class="grey">Distance</span>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="./JsonToString/index.html">
+                    <button class="cardContent">
+                        <span>JsonToString</span>
+                        <span class="grey">Converts JSON to a String</span>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="./JsonToObject/index.html">
+                    <button class="cardContent">
+                        <span>JsonToObject</span>
+                        <span class="grey">Converts JSON to an Object</span>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="./FabricBlock/index.html">
+                    <button class="cardContent">
+                        <span>FabricBlockGen</span>
+                        <span class="grey">FabricBlockGen</span>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="./FabricCuboidShape/index.html">
+                    <button class="cardContent">
+                        <span>FabricCuboidShape</span>
+                        <span class="grey">FabricCuboidShape</span>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="./Meowlanguage/index.html">
+                    <button class="cardContent">
+                        <span>Meow</span>
+                        <span class="grey">Speak in Meow</span>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="./Base64Image/index.html">
+                    <button class="cardContent">
+                        <span>Base64Image</span>
+                        <span class="grey">Base64Image</span>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="./FeatureRenderer/index.html">
+                    <button class="cardContent">
+                        <span>Fabric FeatureRenderer</span>
+                        <span class="grey">FeatureRenderer</span>
+                    </button>
+                </a>
+            </li>
+        </ul>
+    </main>
+
+    <footer>
+
+    </footer>
 
     <!-- Body -->
-    <div id="body">
+    <!-- <div id="body">
         <label for="theme-selector">Set Theme</label>
         <select id="theme-selector" name="theme-selector"></select>
 
@@ -133,7 +227,7 @@
                 </a>
             </li>
         </ul>
-    </div>
+    </div> -->
     <!--/ Body -->
 
 </body>
