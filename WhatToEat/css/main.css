@@ -1,0 +1,221 @@
+/*
+    #version: 1.7
+    #2024 June 24
+*/
+
+/* :root {
+    --text-white: white;
+
+    --background-primary: #ffffff;
+
+    --background-content-primary: #161616;
+    --background-content-secondary: #181818;
+    --background-content-active: #202020;
+
+    --border-color: #787878;
+} */
+
+* {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    color: var(--text-white);
+    font-size: 1rem;
+}
+
+body {
+    background-color: var(--background-primary);
+    margin: 0px;
+}
+
+#body {
+    margin: 10px;
+}
+
+/* <Text> */
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+p {
+    word-wrap: normal;
+    margin: 0px;
+}
+/* </Text> */
+
+/* <Button> */
+button {
+    background-color: var(--background-content-primary);
+    border: none;
+    height: 2rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border-radius: 2px;
+}
+
+button:hover {
+    background-color: var(--background-content-secondary);
+    cursor: pointer;
+}
+
+button:active {
+    background-color: var(--background-content-active);
+    cursor: pointer;
+}
+/* </Button> */
+
+/* <Lists> */
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+/* </Lists> */
+
+/* <Input> */
+input {
+    background-color: var(--background-primary);
+    border: 1px solid var(--border-color);
+    color: var(--text-white);
+
+    height: 2rem;
+    border-radius: 4px;
+    /* padding-left: 1rem;
+    padding-right: 1rem; */
+}
+
+input:focus {
+    outline: none;
+}
+/* </Input> */
+
+/* <RadioInput> */
+.radio-toolbar input[type="radio"] {
+    width: 0px;
+}
+
+.radio-toolbar label {
+    display: inline-block;
+    background-color: var(--background-content-primary);
+    padding: 0.75rem 1rem;
+    border-radius: 2px;
+}
+
+.radio-toolbar label:hover {
+    background-color: var(--background-content-secondary);
+    cursor: pointer;
+}
+
+.radio-toolbar input[type="radio"]:checked+label {
+    background-color: var(--background-content-active);
+    cursor: pointer;
+}
+/* </RadioInput> */
+
+/* <Checkbox Button> */
+.checkbox-toolbar input[type="checkbox"] {
+    width: 0px;
+}
+
+.checkbox-toolbar label {
+    display: inline-block;
+    background-color: var(--background-content-primary);
+    padding: 0.75rem 1rem;
+    border-radius: 2px;
+}
+
+.checkbox-toolbar label:hover {
+    background-color: var(--background-content-secondary);
+    cursor: pointer;
+}
+
+.checkbox-toolbar input[type="checkbox"]:checked+label {
+    background-color: var(--background-content-active);
+    cursor: pointer;
+}
+
+/* <Checkbox Button> */
+
+/* <Select> */
+select {
+    background-color: var(--background-content-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+}
+
+select:focus {
+    outline-color: none;
+}
+/* </Select> */
+
+/* <TextArea> */
+textarea {
+    background-color: var(--background-primary);
+    border: 1px solid var(--border-color);
+    color: var(--text-white);
+}
+/* </TextArea> */
+
+/* <Table> */
+table {
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    border-spacing: 0px;
+}
+
+tr:last-child > td {
+    border-bottom: none;
+}
+
+td,
+th {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+}
+
+td.devide-x,
+th.devide-x {
+    border-right: 1px solid var(--border-color);
+}
+td.devide-x:last-child,
+th.devide-x:last-child {
+    border-right: none;
+}
+/* </Table> */
+
+/* <Extra> */
+.overflow-x {
+    overflow-x: auto;
+}
+
+.overflow-y {
+    overflow-y: auto;
+}
+
+.bold {
+    font-weight: bold;
+}
+/* </Extra> */
