@@ -138,8 +138,8 @@ function askForAllowCookies() {
 }
 
 function allowCookies() {
-    setCookie(cookiesAllowedName, 'true', cookieDomain);
     cookiesAllowed = true;
+    setCookie(cookiesAllowedName, 'true', cookieDomain);
     document.querySelector('#cookies-overlay').remove();
 }
 
