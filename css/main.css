@@ -1,6 +1,6 @@
 /*
-    #version: 1.7
-    #2024 June 24
+    #version: 1.8
+    #2024 October 2
 */
 
 /* :root {
@@ -214,4 +214,32 @@ th.devide-x:last-child {
 .overflow-y {
     overflow-y: auto;
 }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    background-color: none !important;
+}
+
+.overlay * {
+    pointer-events: auto;
+}
 /* </Extra> */
+
+/* <Cookies> */
+.cookies-banner {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    background-color: var(--background-content-primary);
+    border-radius: 0.25rem;
+    padding: 2rem;
+}
+/* </Cookies> */

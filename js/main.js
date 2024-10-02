@@ -1,11 +1,12 @@
 /*
-    #version: 1.2
-    #2024 June 25
+    #version: 1.3
+    #2024 October 2
 */
 
 /* <Config> */
 const domain = window.location.hostname;
 const cookieDomain = '.' + domain;
+const cookiesAllowedName = "cookies";
 /* </Config> */
 
 /* <Events> */
@@ -37,6 +38,7 @@ const themes = {
 let currentTheme;
 
 document.addEventListener('DOMContentLoaded', function() {
+    checkIfCookiesAllowed();
     setTheme(getCookie(themeCookieName, cookieDomain));
 
     Object.keys(themes).forEach(key => {
@@ -76,6 +78,14 @@ function setTheme(theme) {
 }
 /* </Theme Swapper> */
 
+/* <Util> */
+function createOverlay() {
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
+    return overlay;
+}
+/* </Util> */
+
 /* <Storage> */
 function setStorageItem(key, value) {
     if (typeof(Storage) === undefined) {
@@ -91,6 +101,49 @@ function getStorageItem(key) {
     }
 
     return localStorage.getItem(key);
+}
+
+function checkIfCookiesAllowed() {
+    if (getCookie(cookiesAllowedName, cookieDomain) === null) {
+        askForAllowCookies();
+        return false;
+    }
+
+    return true;
+}
+
+function askForAllowCookies() {
+    const overlay = createOverlay();
+    overlay.id = 'cookies-overlay';
+    const container = document.createElement('div');
+    container.classList.add('cookies-banner');
+
+    const cookieMessage = document.createElement('p');
+    cookieMessage.textContent = 'Cookies are used for storing your theme preferences.';
+
+    const allowButton = document.createElement('button');
+    allowButton.addEventListener('click', allowCookies);
+    allowButton.textContent = 'Allow';
+
+    const declineButton = document.createElement('button');
+    declineButton.addEventListener('click', declineCookies);
+    declineButton.textContent = 'Decline';
+
+    overlay.appendChild(container);
+    container.appendChild(cookieMessage);
+    container.appendChild(allowButton);
+    container.appendChild(declineButton);
+
+    document.body.appendChild(overlay);
+}
+
+function allowCookies() {
+    setCookie(cookiesAllowedName, 'true', cookieDomain);
+    document.querySelector('#cookies-overlay').remove();
+}
+
+function declineCookies() {
+    document.querySelector('#cookies-overlay').remove();
 }
 
 function setCookie(key, value, domain) {
