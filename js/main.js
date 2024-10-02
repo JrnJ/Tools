@@ -7,6 +7,7 @@
 const domain = window.location.hostname;
 const cookieDomain = '.' + domain;
 const cookiesAllowedName = "cookies";
+let cookiesAllowed = checkIfCookiesAllowed();
 /* </Config> */
 
 /* <Events> */
@@ -38,7 +39,6 @@ const themes = {
 let currentTheme;
 
 document.addEventListener('DOMContentLoaded', function() {
-    checkIfCookiesAllowed();
     setTheme(getCookie(themeCookieName, cookieDomain));
 
     Object.keys(themes).forEach(key => {
@@ -139,14 +139,18 @@ function askForAllowCookies() {
 
 function allowCookies() {
     setCookie(cookiesAllowedName, 'true', cookieDomain);
+    cookiesAllowed = true;
     document.querySelector('#cookies-overlay').remove();
 }
 
 function declineCookies() {
+    cookiesAllowed = false;
     document.querySelector('#cookies-overlay').remove();
 }
 
 function setCookie(key, value, domain) {
+    if (cookiesAllowed === false) return;
+
     document.cookie = `${key}=${value}; path=/; domain=${domain};`;
 }
 
