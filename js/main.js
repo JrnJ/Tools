@@ -4,7 +4,7 @@
 */
 
 /* <Config> */
-const domain = 'jeroenj.com';
+const domain = window.location.hostname;
 const cookieDomain = '.' + domain;
 /* </Config> */
 
