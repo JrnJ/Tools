@@ -1,0 +1,95 @@
+/*
+    #version: 2.0
+    #2024 June 25
+*/
+
+:root {
+    --author-text-gradient: linear-gradient(to right, #E71016, #FC6B18, #F8C70F, #80C10D, #0BA4F7, #A91DAD, #E71016);
+}
+
+/* <Navigation> */
+nav {
+    height: 120px;
+    width: 100%;
+    background-color: var(--background-content-secondary);
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+nav * {
+    font-family: 'Consolas';
+}
+
+.nav-content {
+    width: 100%;
+    height: 80px;
+    margin: 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-left {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.nav-titles * {
+    height: min-content;
+    font-size: 1.5rem;
+    padding: 0;
+}
+
+.nav-img {
+    height: 100%;
+    margin-right: 20px;
+}
+
+.nav-img > img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-author {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.gradient-text {
+    background: var(--author-text-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    background-size: 200% 100%;
+    animation: gradientAnimation 4s linear infinite;
+}
+/* </Navigation> */
+
+/* <Main> */
+main {
+    margin: 20px;
+}
+/* </Main> */
+
+/* <Footer> */
+footer {
+
+}
+/* </Footer> */

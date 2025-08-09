@@ -1,6 +1,6 @@
 /*
-    #version: 1.9
-    #2025 July 13
+    #version: 1.7
+    #2024 June 24
 */
 
 /* :root {
@@ -206,12 +206,6 @@ th.devide-x:last-child {
 }
 /* </Table> */
 
-/* <Img> */
-svg {
-    fill: var(--text-white);
-}
-/* </Img> */
-
 /* <Extra> */
 .overflow-x {
     overflow-x: auto;
@@ -220,64 +214,4 @@ svg {
 .overflow-y {
     overflow-y: auto;
 }
-
-.stackpanel {
-    display: flex;
-    flex-direction: column;
-}
-
-.dockpanel {
-    display: flex;
-    flex-direction: row;
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    pointer-events: none;
-    background-color: none !important;
-}
-
-.overlay * {
-    pointer-events: auto;
-}
-
-.card {
-    border: 1px solid var(--border-color);
-    border-radius: 0.5rem;
-    background-color: var(--background-content-secondary);
-    padding: 1rem;
-}
 /* </Extra> */
-
-/* <Gap> */
-.gap-1 {
-    gap: 0.25rem;
-}
-.gap-2 {
-    gap: 0.5rem;
-}
-.gap-3 {
-    gap: 0.75rem;
-}
-.gap-4 {
-    gap: 1rem;
-}
-/* </Gap> */
-
-/* <Cookies> */
-.cookies-banner {
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-
-    display: flex;
-    background-color: var(--background-content-primary);
-    border-radius: 0.25rem;
-    padding: 2rem;
-}
-/* </Cookies> */

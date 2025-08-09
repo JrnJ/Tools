@@ -1,6 +1,6 @@
 /*
     #version: 1.3
-    #2025 July 13
+    #2024 September 1
 */
 
 /* <Config> */
@@ -13,16 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 /* </Events> */
-
-/* <?> */
-function isMobileDevice() {
-    return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-}
-
-function deviceSupportsHover() {
-    return window.matchMedia("(hover: hover)").matches;
-}
-/* </?> */
 
 /* <Theme Swapper> */
 const themeCookieName = 'theme';
@@ -92,7 +82,7 @@ function setStorageItem(key, value) {
         return null;
     }
 
-    localStorage.setItem(key, value);
+    localStorage.setItem(key, JSON.stringify(value));
 }
 
 function getStorageItem(key) {
@@ -100,7 +90,7 @@ function getStorageItem(key) {
         return null;
     }
 
-    return localStorage.getItem(key);
+    return JSON.parse(localStorage.getItem(key));
 }
 
 function setCookie(key, value, domain) {

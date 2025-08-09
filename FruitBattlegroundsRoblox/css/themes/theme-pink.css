@@ -1,0 +1,16 @@
+:root {
+    /*
+        #version: 1.0
+        #2024 June 24
+    */
+
+    --text-white: #ffa1a4;
+
+    --background-primary: #ffd9d9;
+
+    --background-content-primary: #ffd0d0;
+    --background-content-secondary: #ffcbcb;
+    --background-content-active: #ffc6c6;
+
+    --border-color: #787878;
+}

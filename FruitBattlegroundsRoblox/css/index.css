@@ -1,0 +1,65 @@
+.boss-within-3m {
+    font-weight: bold;
+    color: lightgreen;
+}
+
+.boss-within-5m {
+    color: green;
+}
+
+.boss-within-15m {
+    color: white;
+}
+
+.boss-within-30m {
+    color: lightgray;
+}
+
+.boss-over-within-4m {
+    color: orange;
+}
+
+.regular {
+    color: grey;
+}
+
+.delete-icon svg {
+    height: 2rem;
+    width: 2rem;
+}
+
+/**/
+
+.number-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min-content;
+}
+
+.number-box button {
+    width: 30px;
+    border-top: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.number-box button.left {
+    width: 30px;
+    border-radius: 100% 0px 0px 100%;
+    border-left: 2px solid var(--border-color);
+}
+
+.number-box button.right {
+    width: 30px;
+    border-radius: 0px 100% 100% 0px;
+    border-right: 2px solid var(--border-color);
+}
+
+.number-box p {
+    width: 30px;
+    height: 28px;
+    text-align: center;
+
+    border-top: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
+}

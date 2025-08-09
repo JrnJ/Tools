@@ -12,37 +12,41 @@
     <!-- <meta property="og:image" content="https://embed.com/embedimage.png" /> -->
     <meta data-react-helmet="true" name="theme-color" content="#FF6600" />
 
-    <!-- Likely not up to date -->
-    <!-- Copied from Primary styling -->
-    <link rel="stylesheet" type="text/css" href="./../css/main.css" />
-    <link rel="stylesheet" type="text/css" href="./../css/navigation.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/navigation.css" />
 
-    <!-- Primary styling -->
-    <link rel="stylesheet" type="text/css" href="./../../css/main.css" />
+    <!-- Themes -->
+    <link rel="stylesheet" type="text/css" href="" id="theme-current" />
+
+    <!-- Scripts -->
+    <script src="./js/main.js" defer></script>
+    <script src="./js/generator.js" defer></script>
 </head>
 
 <body>
-
-    <!-- Navigation | v1.1 -->
-    <div id="navigation">
-        <div id="navBackground"></div>
-
-        <div id="navContent">
-            <div class="navImageBorder">
-                <a href="./../index.html"><button class="navImage"></button></a>
-                <div class="navWikiInfo">
-                    <span class="navTitle">Distance</span>
-                    <br><span class="navTitle">Distance</span>
-                    <br><a href="https://github.com/JrnJ"
-                        style="color: #FF6600; text-decoration: none; font-weight: bold;">By JeroenJ</a>
+    <!-- <Navigation v2.1> -->
+    <nav>
+        <div class="nav-content">
+            <div class="nav-left">
+                <a href="" class="nav-img">
+                    <img src="../3dSphere.png">
+                </a>
+                <div class="nav-titles">
+                    <p class="nav-title-primary">Fabric Cuboid Shape</p>
+                       <p class="nav-title-secondary">Fabric Cuboid Shape</p>
+                    <p class="nav-author gradient-text">JeroenJ</p>
                 </div>
             </div>
+            <div>
+                <label for="theme-selector">Theme</label>
+                <select id="theme-selector" name="theme-selector"></select>
+            </div>
         </div>
-    </div>
-    <!-- /Navigation | v1.1  -->
+    </nav>
+    <!-- </Navigation v2.1> -->
 
-    <!-- Body -->
-    <div id="body">
+    <main>
         <center>
             <h1>Name</h1>
             <input id="inputName"     placeholder="EXAMPLE_"                type="text"               oninput="showOutput()">
@@ -62,11 +66,7 @@
             <h2>Output</h2>
             <textarea id="output" style="width: 900px; height: 300px;"></textarea><br>
         </center>
-    </div>
-    <!-- /Body -->
-
-    <script src="./js/main.js"></script>
-
+    </main>
 </body>
 
 </html>

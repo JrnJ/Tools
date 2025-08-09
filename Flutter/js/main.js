@@ -1,6 +1,6 @@
 /*
-    #version: 1.3
-    #2025 July 13
+    #version: 1.2
+    #2024 June 25
 */
 
 /* <Config> */
@@ -13,16 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 /* </Events> */
-
-/* <?> */
-function isMobileDevice() {
-    return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-}
-
-function deviceSupportsHover() {
-    return window.matchMedia("(hover: hover)").matches;
-}
-/* </?> */
 
 /* <Theme Swapper> */
 const themeCookieName = 'theme';

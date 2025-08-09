@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>JeroenJ | Tools</title>
+    <meta charset="UTF-8">
+
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="JeroenJ | Tools" />
+    <meta property="og:description" content="Useful Random Tools" />
+    <meta property="og:url" content="https://tools.jeroenj.com" />
+    <!-- <meta property="og:image" content="https://embed.com/embedimage.png" /> -->
+    <meta data-react-helmet="true" name="theme-color" content="#FF6600" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/navigation.css" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+
+    <!-- Themes -->
+    <link rel="stylesheet" type="text/css" href="" id="theme-current" />
+
+    <!-- Scripts -->
+    <script src="./js/main.js" defer></script>
+
+    <!-- Generic -->
+    <script src="./js/index.js" defer></script>
+</head>
+
+<body>
+
+    <!-- <Navigation v2.0> -->
+    <nav>
+        <div class="nav-content">
+            <div class="nav-left">
+                <div class="nav-img">
+                    <img src="./3dSphere.png">
+                </div>
+                <div class="nav-titles">
+                    <p class="nav-title-primary">Roblox Server Tracker</p>
+                       <p class="nav-title-secondary">Time based Roblox server tracker</p>
+                    <p class="nav-author gradient-text">JeroenJ</p>
+                </div>
+            </div>
+            <div>
+                <label for="theme-selector">Theme</label>
+                <select id="theme-selector" name="theme-selector"></select>
+            </div>
+        </div>
+    </nav>
+    <!-- </Navigation> -->
+
+    <main>
+        <!-- <h1>How to use:</h1>
+        <div class="collapsable">
+            <ol>
+                <li></li>
+                <li>Go to <a href="https://www.roblox.com/games/9224601490/DOUGH-V2-Fruit-Battlegrounds#!/game-instances">Link (Click Me)</a></li>
+                <li>Press "Ctrl + Shift + I", click the "Console" tab.</li>
+                <li>Click "Exclude Full Server"</li>
+                <li>Click "Refresh"</li>
+                <li>Click the Join button</li>
+                <li></li>
+            </ol>
+            
+        </div> -->
+
+        <h1>Tracked Times (Saved to LocalStorage)</h1>
+        <div class="stackpanel card gap-4">
+            <!-- <h2>Add Server Entry</h2> -->
+            <div class="dockpanel gap-4">
+                <input type="text" id="serverId" placeholder="server-id">
+                <input type="text" id="serverTime" placeholder="Servertime minutes: 59">
+                <input type="datetime-local" id="registerTime">
+                <button onclick="addServerEntryClick()">Add</button>
+            </div>
+        </div>
+<br>
+        <div id="serverEntryContainer" class="stackpanel card">
+            
+        </div>
+    </main>
+</body>

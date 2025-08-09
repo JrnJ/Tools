@@ -12,33 +12,42 @@
     <!-- <meta property="og:image" content="https://embed.com/embedimage.png" /> -->
     <meta data-react-helmet="true" name="theme-color" content="#FF6600" />
 
-    <link rel="stylesheet" type="text/css" href="./../css/main.css" />
-    <link rel="stylesheet" type="text/css" href="./../css/navigation.css" />
+    <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/navigation.css" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+
+    <!-- Themes -->
+    <link rel="stylesheet" type="text/css" href="" id="theme-current" />
+
+    <!-- Scripts -->
+    <script src="./js/main.js" defer></script>
+    <script src="./js/converter.js" defer></script>
 </head>
 
 <body>
-
-    <!-- Navigation | v1.1 -->
-    <div id="navigation">
-        <div id="navBackground"></div>
-
-        <div id="navContent">
-            <div class="navImageBorder">
-                <a href="./../index.html"><button class="navImage"></button></a>
-                <div class="navWikiInfo">
-                    <span class="navTitle">JsonToString</span>
-                    <br><span class="navTitle">Converts JSON to a String</span>
-                    <br><a href="https://github.com/JrnJ"
-                        style="color: #FF6600; text-decoration: none; font-weight: bold;">By JeroenJ</a>
+    <!-- <Navigation v2.1> -->
+    <nav>
+        <div class="nav-content">
+            <div class="nav-left">
+                <a href="" class="nav-img">
+                    <img src="../3dSphere.png">
+                </a>
+                <div class="nav-titles">
+                    <p class="nav-title-primary">Fabric featureRenderer</p>
+                       <p class="nav-title-secondary">Generate a FeatureRenderer for Fabric</p>
+                    <p class="nav-author gradient-text">JeroenJ</p>
                 </div>
             </div>
+            <div>
+                <label for="theme-selector">Theme</label>
+                <select id="theme-selector" name="theme-selector"></select>
+            </div>
         </div>
-    </div>
-    <!-- /Navigation | v1.1  -->
+    </nav>
+    <!-- </Navigation v2.1> -->
 
-    <!-- Body -->
-    <div id="body">
+    <main>
         <div class="input-output">
             <div class="input">
                 <h1>Input</h1>
@@ -68,11 +77,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- /Body -->
-
-    <script src="./js/converter.js"></script>
-
+    </main>
 </body>
 
 </html>

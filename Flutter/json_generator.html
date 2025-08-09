@@ -2,13 +2,16 @@
 <html lang="en-US">
 
 <head>
-    <title>FabricBlockGen</title>
+    <title>JeroenJ | Tools</title>
     <meta charset="UTF-8">
 
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Turns a name into stuff" />
-    <meta property="og:description" content="Turns a name into stuff" />
-    <meta property="og:url" content="https://tools.jeroenj.com/FabricBlock" />
+    <meta property="og:title" content="JeroenJ | Flutter" />
+    <meta property="og:description" content="Flutter Help" />
+    <meta property="og:url" content="https://tools.jeroenj.com" />
     <!-- <meta property="og:image" content="https://embed.com/embedimage.png" /> -->
     <meta data-react-helmet="true" name="theme-color" content="#FF6600" />
 
@@ -21,19 +24,21 @@
 
     <!-- Scripts -->
     <script src="./js/main.js" defer></script>
+    <script src="./js/json_generator.js" defer></script>
 </head>
 
 <body>
+
     <!-- <Navigation v2.1> -->
     <nav>
         <div class="nav-content">
             <div class="nav-left">
                 <a href="" class="nav-img">
-                    <img src="../3dSphere.png">
+                    <img src="./3dSphere.png">
                 </a>
                 <div class="nav-titles">
-                    <p class="nav-title-primary">FabricBlockGen</p>
-                       <p class="nav-title-secondary">Name to Fabric Block</p>
+                    <p class="nav-title-primary">Flutter</p>
+                       <p class="nav-title-secondary">Flutter Help</p>
                     <p class="nav-author gradient-text">JeroenJ</p>
                 </div>
             </div>
@@ -46,17 +51,9 @@
     <!-- </Navigation v2.1> -->
 
     <main>
-        <center>
-            <span style="font-size: 24px;">Name</span><br>
-            <textarea id="jsonText" style="width: 900px; height: 300px;"></textarea><br>
-            <button onclick="ConvertJSON()">Convert</button><br><br>
-            <span style="font-size: 24px;">Object Output</span><br>
-            <textarea id="jsonObjectText" style="width: 900px; height: 300px;"></textarea><br>
-        </center>
+        <textarea id="dart-input" placeholder="Enter Dart class here" style="width: 300px; height: 500px;"></textarea>
+        <button id="dart-generate">Generate</button>
+        <textarea id="dart-output" placeholder="Output Dart emthods here" style="width: 600px; height: 500px;"></textarea>
     </main>
 
-    <script src="./js/converter.js"></script>
-
 </body>
-
-</html>
